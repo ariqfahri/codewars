@@ -1,0 +1,14 @@
+function getMiddle($text) {
+  $jmlKata = strlen($text);
+  
+  if($jmlKata % 2 == 0){ 
+      $tengah = ($jmlKata / 2) -1 ;
+        $kata = substr($text, $tengah, 2); 
+        
+    } 
+    else{ 
+        $tengah = ($jmlKata / 2);  
+        $kata = substr($text, $tengah, 1); 
+    } 
+    return $kata;
+}
