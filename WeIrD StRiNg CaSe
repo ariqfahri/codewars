@@ -1,0 +1,29 @@
+function toWeirdCase($string) {
+  // TODO
+  
+  $kataBaru = "";
+  $string = ucwords($string);
+  
+  $array = array();
+  
+  $array = explode(" ", $string);
+  //echo strlen($array[0]);
+  
+  for($i = 0; $i < count($array); $i++){
+    $strKata = $array[$i];
+    for($j = 0; $j < strlen($strKata); $j++){
+        if($j % 2 == 0){
+          //echo $strKata[$j]."<br>";
+          $kataBaru.= strtoupper($strKata[$j]);
+        } else{
+          $kataBaru.=strtolower($strKata[$j]);
+        }
+    }
+    $kataBaru.= " ";
+  }
+  
+  $kataBaru = substr($kataBaru, 0, -1);
+  return $kataBaru;
+  
+  
+}
