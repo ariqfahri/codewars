@@ -1,0 +1,23 @@
+/*KASUS
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"*/
+
+
+function accum($s) {
+    // your code
+    $kata = "";
+    for($i=0; $i < strlen($s); $i++){
+      $position = strpos($s, $s[$i]);
+      $kata.=strtoupper($s[$i]);
+      
+      for($j=1; $j < $i+1; $j++){
+        $kata.=strtolower($s[$i]);
+      }
+      
+      if($i != strlen($s)-1){
+        $kata.="-";
+      } 
+    }
+    return $kata; 
+}
