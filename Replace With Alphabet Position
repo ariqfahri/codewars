@@ -1,0 +1,26 @@
+function alphabet_position(string $s): string {
+  // Your code here
+  echo $s."<br>";
+  $cleanString = strtolower(preg_replace('/[^a-zA-Z]/', ' ', $s));
+  
+  
+  $isi = "";
+  
+  for($i=0; $i < strlen($cleanString); $i++){
+    $urutan = 1;
+    foreach(range('a', 'z') as $value){
+      //echo $cleanString[$i]."==".$value."<br>";
+    
+      if($cleanString[$i] == $value){
+        $isi.=$urutan." ";
+        //echo $urutan."<br>";
+        break;
+      } 
+      
+      $urutan++;
+    }
+    
+  }
+  
+  return substr($isi, 0, -1);
+}
