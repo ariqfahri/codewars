@@ -1,0 +1,15 @@
+function betterThanAverage($classPoints, $yourPoints) {
+  // Your code here
+  $N = count($classPoints);
+  $total = 0;
+  foreach ($classPoints as $value){
+    $total+=$value;
+  }
+ 
+  $hasil = $total / $N;
+  if($yourPoints > $hasil){
+    return true;
+  } else{
+    return false;
+  }
+}
